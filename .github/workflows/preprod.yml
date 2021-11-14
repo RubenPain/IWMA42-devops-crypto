@@ -40,10 +40,10 @@ jobs:
 
       - name: Install requirements
         run: |
-          python -m pip install -r requirements.txt
+          python -m pip install -r pylint
       - name: Run pylint
         run: |
-          pylint app.py
+          pylint app.py --fail-under=6
   test:
     needs: build
     # The type of runner that the job will run on
@@ -60,7 +60,7 @@ jobs:
 
       - name: Install requirements
         run: |
-          python -m pip install -r requirements.txt
+          python -m pip install -r pytest
       - name: Run pytest
         run: |
           py.test test.py
