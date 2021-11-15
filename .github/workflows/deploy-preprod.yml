@@ -16,3 +16,4 @@ jobs:
             heroku_app_name: "devops-iwma42-preprod" #Must be unique in Heroku
             heroku_email: "ruben.pain@edu.devinci.fr"
             branch: "develop"
+            dontuseforce: true
